@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Submenu</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px;
+            background: #f4f4f4;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button id="menuButton">Menu</button>
+    <ul id="submenu" class="hidden">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    
+    <script>
+        document.getElementById("menuButton").addEventListener("click", function() 
+        {
+            let submenu = document.getElementById("submenu");
+            
+            submenu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

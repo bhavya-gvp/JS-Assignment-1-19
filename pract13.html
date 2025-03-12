@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function compare(obj1, obj2) 
+        {
+            if (Object.keys(obj1).length !== Object.keys(obj2).length) 
+            {
+                return false;
+            }
+
+            function compare(key) 
+            {
+                return obj1[key] === obj2[key];
+            }
+
+            if (compare('name') && compare('age')) 
+            {
+                return true;
+            }
+
+            return false;
+        }
+        let object1 = { name: "Alice", age: 25 };
+        let object2 = { name: "Alice", age: 25 };
+        let object3 = { name: "Bob", age: 30 };
+
+        console.log(compare(object1, object2)); 
+        console.log(compare(object1, object3));  
+
+
+    </script>
+</body>
+</html>

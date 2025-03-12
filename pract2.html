@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meters to Kilometers</title>
+    <style>
+      
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #007BFF;
+        }
+
+        .result {
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meters to Kilometers Conversion</h1>
+        <script>
+            var a, b, r, s;
+            a = parseInt(prompt("Enter Meters"));
+            r = a / 1000;
+            console.log(r + " Kilometers");
+
+            b = parseInt(prompt("Enter Kilometers"));
+            s = b * 1000;
+            console.log(s + " Meters");
+            
+            document.write("<div class='result'>");
+            document.write("<p>" + a + " Meters is equal to " + r + " Kilometers.</p>");
+            document.write("<p>" + b + " Kilometers is equal to " + s + " Meters.</p>");
+            document.write("<button class='button' onclick='window.location.reload()'>Try Again</button>");
+            document.write("</div>");
+        </script>
+    </div>
+</body>
+</html>
