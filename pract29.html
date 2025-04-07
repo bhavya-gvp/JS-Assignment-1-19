@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Dropdown Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#addOptionsBtn').click(function() {
+                const options = ['JavaScript', 'Python', 'Java', 'C++'];
+
+                // Clear existing options
+                $('#languageSelect').empty();
+
+                // Add new options
+                $.each(options, function(index, value) {
+                    $('#languageSelect').append(`<option value="${value}">${value}</option>`);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h2>Dynamic Dropdown Example</h2>
+
+    <select id="languageSelect">
+        <option value="">-- Select a Language --</option>
+    </select>
+    <br>
+    <button id="addOptionsBtn">Add Languages</button>
+
+</body>
+</html>

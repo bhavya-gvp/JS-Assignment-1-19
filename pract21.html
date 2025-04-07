@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disable Right Click</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(document).on("contextmenu", function(e) {
+                e.preventDefault();
+                alert("Right click is disabled on this page!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Right-click is disabled on this page</h2>
+    <p>Try right-clicking anywhere!</p>
+</body>
+</html>

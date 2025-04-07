@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print Page Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #printSection {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printSection, #printSection * {
+                visibility: visible;
+            }
+            #printSection {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#printBtn').click(function() {
+                window.print();
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="printSection">
+        <h2>Printable Content</h2>
+        <p>This section will be printed when you click the button below.</p>
+    </div>
+
+    <button id="printBtn">Print Page</button>
+
+</body>
+</html>

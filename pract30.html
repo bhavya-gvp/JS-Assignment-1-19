@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Child Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        #parentBox {
+            border: 2px solid #ccc;
+            padding: 15px;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        .child {
+            background-color: #f0f0f0;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        #childCount {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#countBtn').click(function() {
+                const count = $('#parentBox').children().length;
+                $('#childCount').text(`Child elements count: ${count}`);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h2>Count Child Elements in jQuery</h2>
+
+    <div id="parentBox">
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+    </div>
+
+    <button id="countBtn">Count Child Elements</button>
+    <div id="childCount"></div>
+
+</body>
+</html>

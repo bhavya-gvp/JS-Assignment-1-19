@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Underline Words</title>
+    <style>
+        .underline-word {
+            text-decoration: underline;
+            margin-right: 4px;
+        }
+
+        #textContainer {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let container = $('#textContainer');
+            let text = container.text();
+
+            let words = text.trim().split(/\s+/);
+            let underlinedWords = words.map(word => `<span class="underline-word">${word}</span>`).join(' ');
+
+            container.html(underlinedWords);
+        });
+    </script>
+</head>
+<body>
+
+    <h2>Underlined Words Example</h2>
+    <div id="textContainer">
+        This is a sample paragraph where each word will be underlined using jQuery.
+    </div>
+
+</body>
+</html>

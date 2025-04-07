@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enable/Disable Submit Button</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initially disable the submit button
+            $('#submitBtn').prop('disabled', true);
+
+            // Enable the button when the checkbox is checked
+            $('#agree').change(function() {
+                if ($(this).is(':checked')) {
+                    $('#submitBtn').prop('disabled', false);
+                } else {
+                    $('#submitBtn').prop('disabled', true);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label>
+            <input type="checkbox" id="agree"> I agree to the terms and conditions
+        </label>
+        <br><br>
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+</body>
+</html>

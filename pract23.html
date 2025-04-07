@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blinking Text</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            setInterval(function() {
+                $('#blinkText').fadeOut(500).fadeIn(500);
+            }, 1000); // 1 second interval
+        });
+    </script>
+</head>
+<body>
+    <h2 id="blinkText">This text will blink!</h2>
+</body>
+</html>
